@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class Utility extends BaseTest {
+
+
     public void clickOnElement(By by) {
 
         driver.findElement(by).click();
@@ -49,8 +51,4 @@ public class Utility extends BaseTest {
         new Select(driver.findElement(by)).selectByIndex(index);
 
     }
-
-
-
-
 }

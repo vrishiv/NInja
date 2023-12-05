@@ -23,7 +23,7 @@ public class TopMenuTest extends Utility {
     }
 
     @Test
-    public void verifyUserShouldNavigateToDesktopsPageSuccessfully(){
+    public void navigateToDesktopsPage(){
 
         WebElement desktop = driver.findElement(By.linkText("Desktops"));
         Actions actions = new Actions(driver);
@@ -36,7 +36,7 @@ public class TopMenuTest extends Utility {
     }
 
     @Test
-    public void verifyUserShouldNavigateToLaptopsAndNotebooksPageSuccessfully(){
+    public void nvigateToLaptopsAndNotebooksPage(){
 
         WebElement ln = driver.findElement(By.linkText("Laptops & Notebooks"));
         Actions actions = new Actions(driver);
@@ -49,7 +49,7 @@ public class TopMenuTest extends Utility {
     }
 
     @Test
-    public void verifyUserShouldNavigateToComponentsPageSuccessfully(){
+    public void navigateToComponentsPage(){
 
         WebElement components = driver.findElement(By.linkText("Components"));
         Actions actions = new Actions(driver);
