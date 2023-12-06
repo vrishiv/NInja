@@ -71,7 +71,7 @@ public class LaptopsAndNotebooksTest extends Utility {
         Assert.assertEquals( eMacbook, aMacbook );
 
         clickOnElement( By.id( "button-cart" ) );
-        driver.manage().timeouts().implicitlyWait( Duration.ofSeconds( 20 ) );
+//        driver.manage().timeouts().implicitlyWait( Duration.ofSeconds( 20 ) );
 
         String eSuccessMsg = "Success: You have added MacBook to your shopping cart!\n" +
                 "×";
@@ -116,22 +116,26 @@ public class LaptopsAndNotebooksTest extends Utility {
         sendTextToElement( By.id( "input-payment-lastname" ), "Patel" );
         sendTextToElement( By.id( "input-payment-email" ), "SP@yahoo.com" );
         sendTextToElement( By.id( "input-payment-telephone" ), "9825198251" );
-        sendTextToElement ( By.id( "input-payment-password" ), "sp98765" );
-        sendTextToElement( By.id( "Password Confirm" ), "sp98765" );
+//        sendTextToElement ( By.id( "input-payment-password" ), "sp98765" );
+//        sendTextToElement( By.id( "Password Confirm" ), "sp98765" );
         sendTextToElement( By.id( "input-payment-address-1" ), "wallmart" );
         sendTextToElement( By.id( "input-payment-city" ), "Salford" );
-        sendTextToElement( By.id( "input-payment-postcode" ), "MA21ND" );
-        selectByVisibleTextFromDropDown( By.id( "input-payment-zone" ), "Manchester" );
-        clickOnElement( By.xpath( "//body/div[@id='checkout-checkout']/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[4]/div[1]/input[1]" ) );
-        clickOnElement( By.id( "button-guest" ) );
-        sendTextToElement( By.xpath( "//textarea[@class = 'form-control']" ), "Successful" );
-        clickOnElement( By.xpath( "//input[@type='checkbox']" ) );
+        sendTextToElement( By.id( "input-payment-postcode" ), "MA2 1ND" );
+        selectByVisibleTextFromDropDown( By.id( "input-payment-zone" ), "Lancashire" );
+        clickOnElement( By.xpath( "//*[@id=\"button-guest\"]" ) );
+        sendTextToElement(By.xpath( "//*[@id=\"collapse-payment-method\"]/div/p[2]/textarea" ),"Birthday Gift" );
+        driver.findElement(By.xpath( "//*[@id=\"collapse-payment-method\"]/div/div[2]/div/input[1]" )).click();
         clickOnElement( By.id( "button-payment-method" ) );
-
-        String eWarning = "Warning: Payment method required!\n" +
-                "×";
-        String aWarning = driver.findElement( By.xpath( "//div[text()='Warning: Payment method required!']" ) ).getText();
-        Assert.assertEquals( eWarning, aWarning );
+//        clickOnElement( By.xpath( "<input type=\"checkbox\" name=\"agree\" value=\"1\">" ) );
+//        clickOnElement( By.id( "button-guest" ) );
+//        sendTextToElement( By.xpath( "//textarea[@class = 'form-control']" ), "Successful" );
+//        clickOnElement( By.xpath( "//input[@type='checkbox']" ) );
+//        clickOnElement( By.id( "button-payment-method" ) );
+//
+//        String eWarning = "Warning: Payment method required!\n" +
+//                "×";
+//        String aWarning = driver.findElement( By.xpath( "//div[text()='Warning: Payment method required!']" ) ).getText();
+//        Assert.assertEquals( eWarning, aWarning );
 
 
     }

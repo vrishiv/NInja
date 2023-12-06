@@ -130,7 +130,7 @@ public class DesktopsTest extends Utility {
     @After
     public void endTest() {
 
-        // closeBrowser();
+         closeBrowser();
     }
 
 }
